@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.text-primary-color {
+  color: #FF4B4B;
+}
+
+.text-secondary-color {
+  color: #FFDB58;
+}
+
+.text-tertiary-color {
+  color: 		#4bffff;
+}
+
+.bg-primary-color {
+  background-color: #FF4B4B;
+}
+
+body {
+  background: #252423;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
