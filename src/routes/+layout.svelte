@@ -7,6 +7,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>larryamiel.dev - Full Stack Web Developer</title>
 </svelte:head>
 
 {@render children()}
