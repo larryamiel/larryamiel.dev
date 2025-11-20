@@ -1,6 +1,6 @@
 <script>
   import PHSVG from '$lib/assets/ph.svg';
-  import JapanSVG from '$lib/assets/japan.svg';
+  import JPSVG from '$lib/assets/jp.svg';
   import ESSVG from '$lib/assets/es.svg';
   import ITSVG from '$lib/assets/it.svg';
   import GridSVG from '$lib/assets/grid.svg';
@@ -10,7 +10,7 @@
 
   const svgs = [
     PHSVG,
-    JapanSVG,
+    JPSVG,
     ESSVG,
     ITSVG
   ];
