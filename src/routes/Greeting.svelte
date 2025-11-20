@@ -56,29 +56,44 @@
 
 <style>
   .header {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-		.jumbo {
-			color: #ffffff;
-			font-weight: 600;
-			font-size: 4rem;
-			line-height: 0.9;
-		}
+  .header .jumbo {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 0.9;
+  }
 
-    .greeting {
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 4rem;
-      line-height: 0.9;
+  .header .greeting {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 0.9;
+  }
+
+  .header .title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 0.9;
+  }
+
+  /* Media query outside the selector */
+  @media only screen and (max-width: 768px) {
+    .header .jumbo {
+      font-size: 2.5rem;
     }
 
-		.title {
-			color: #ffffff;
-			font-weight: 600;
-			font-size: 1.4rem;
-			line-height: 0.9;
-		}
-	}
+    .header .greeting {
+      font-size: 2.5rem;
+    }
+
+    .header .title {
+      font-size: 1.2rem;
+    }
+  }
 </style>

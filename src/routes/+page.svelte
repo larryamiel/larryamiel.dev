@@ -10,21 +10,37 @@
 	import Skills from './Skills.svelte';
 </script>
 
-<div role="none" class="container flex flex-row">
+<div role="none" class="container flex lg:flex-row flex-col">
 	<div class="left flex flex-col justify-between">
+		<div class="mb-4 lg:hidden block">
+			<div class="social-icons flex flex-row flex-wrap gap-4">
+				<div class="social-icon w-6 h-6">
+					<a href="https://github.com/larryamiel/" target="_blank">
+						<img src={IconGithub} alt="Github" />
+					</a>
+				</div>
+
+				<div class="social-icon w-6 h-6">
+					<a href="https://www.linkedin.com/in/larry-amiel-tablando-996993152/" target="_blank">
+						<img src={IconLinkedin} alt="Linkedin" />
+					</a>
+				</div>
+			</div>
+		</div>
+
 		<div>
 			<Greeting />
 
 			<div class="my-10">
-				<Squiggle length={500} />
+				<Squiggle length={420} />
 			</div>
 		</div>
 
-		<div class="w-120 max-h-120">
+		<div class="lg:w-120 w-full lg:max-h-120 max-h-80">
 			<RandomIcons />
 		</div>
 
-		<div class="my-10">
+		<div class="my-10 lg:block hidden">
 			<div class="social-icons flex flex-row flex-wrap gap-8">
 				<div class="social-icon w-8 h-8">
 					<a href="https://github.com/larryamiel/" target="_blank">
@@ -87,5 +103,19 @@
 		color: #ffffff;
 		font-weight: 400;
 		font-size: 1.5rem;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.left,
+		.right {
+			width: 100%;
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.left {
+			position: relative;
+			height: auto;
+		}
 	}
 </style>

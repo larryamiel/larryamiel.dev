@@ -36,3 +36,10 @@ body {
   width: 1200px;
   margin: auto;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100vw;
+    margin: auto;
+  }
+}

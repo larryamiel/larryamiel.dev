@@ -32,23 +32,25 @@
   });
 </script>
 
-<svg
-  width={length}
-  height="24"
-  fill="none"
-  viewBox="0 0 {length} 24"
->
-  <path
-    bind:this={squiggle}
-    d="M0 12 
-       Q6 0 12 12
-       {squigglePath}"
-    stroke={colorFrom}
-    stroke-width="5"
-    stroke-linecap="round"
+<div class="relative overflow-hidden w-full">
+  <svg
+    width={length}
+    height="24"
     fill="none"
-  />
-</svg>
+    viewBox="0 0 {length} 24"
+  >
+    <path
+      bind:this={squiggle}
+      d="M0 12 
+        Q6 0 12 12
+        {squigglePath}"
+      stroke={colorFrom}
+      stroke-width="5"
+      stroke-linecap="round"
+      fill="none"
+    />
+  </svg>
+</div>
 
 <style>
   svg {
