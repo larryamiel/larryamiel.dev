@@ -93,11 +93,11 @@
 
     const getCurrentWeather = () => {
       if (currentCountry && !Object.keys(weatherData).includes(currentCountry.name)) {
-        fetch(weatherBaseEndpoint.replace('{latitude}', currentCountry.latitude).replace('{longitude}', currentCountry.longitude))
-          .then(response => response.json())
-          .then(data => {
-            weatherData[currentCountry.name] = data;
-          });
+        // fetch(weatherBaseEndpoint.replace('{latitude}', currentCountry.latitude).replace('{longitude}', currentCountry.longitude))
+        //   .then(response => response.json())
+        //   .then(data => {
+        //     weatherData[currentCountry.name] = data;
+        //   });
       }
     }
 
@@ -122,13 +122,13 @@
 	});
 </script>
 
-<div class="countries relative lg:min-h-[450px] min-h-[300px]">
+<div class="countries relative lg:min-h-[450px] min-h-[450px]">
   
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-auto z-0">
     <img class="sway opacity-50" src={GridSVG} alt="Grid"  id="random-grid">
   </div>
   
-  <img class="sway relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-22" src={currentCountry.svg} alt="Placeholder" id="active-svg">
+  <img class="sway absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-22" src={currentCountry.svg} alt="Placeholder" id="active-svg">
 
   <div class="sway country-data absolute top-0 left-0">
     <span class="country-name text-white space-mono">{currentCountry.name}</span>

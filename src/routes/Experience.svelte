@@ -16,11 +16,11 @@
   })
 </script>
 
-<div transition:fade id="experience-{index}" class="experience flex flex-row gap-4">
-  <div class="w-1/4">
+<div transition:fade id="experience-{index}" class="experience flex lg:flex-row flex-col gap-4">
+  <div class="lg:w-1/4 w-full">
     <span class="experience-date text-secondary-color">{experience.from} - {experience.to}</span>
   </div>
-  <div class="w-3/4">
+  <div class="lg:w-3/4 w-full">
     <span class="experience-title"><span class="experience-highlight">{experience.title}</span> <b class="text-primary-color">·</b> {experience.company}</span>
     <span class="experience-description">{experience.description}</span>
   

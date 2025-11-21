@@ -32,7 +32,7 @@
 			<Greeting />
 		</div>
 
-		<div class="lg:w-120 w-full lg:max-h-120 max-h-80">
+		<div class="lg:w-120 w-full">
 			<Countries />
 		</div>
 
@@ -105,11 +105,12 @@
 		.left,
 		.right {
 			width: 100%;
-			padding-top: 4rem;
+			padding-top: 0;
 			padding-bottom: 4rem;
 		}
 
 		.left {
+			padding-top: 4rem;
 			position: relative;
 			height: auto;
 		}

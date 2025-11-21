@@ -38,4 +38,16 @@
       margin-bottom: 10px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    .skill-icon {
+      width: calc(100% / 3 - 20px);
+      height: 72px;
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
 </style>
