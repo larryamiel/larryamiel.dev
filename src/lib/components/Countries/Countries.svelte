@@ -146,6 +146,9 @@
   .country-data {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 80%;
+    left: 0;
   }
 
   .country-data .country-name {
