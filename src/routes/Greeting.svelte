@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { animate } from "animejs";
+	import { animate, createTimer } from "animejs";
 	import { onMount } from "svelte";
 
   const greetings = [
@@ -20,17 +20,19 @@
     for (let i = 0; i < characters.length; i++) {
       setTimeout(() => {
         greetingText += characters[i];
-
-        if (i === characters.length - 1) {
-          setTimeout(() => {
-            currentGreeting = (currentGreeting + 1) % greetings.length;
-            greetingText = '';
-            typeGreeting(greetings[currentGreeting]);
-          }, 5000);
-        }
       }, 200 * i);
     }
   }
+
+  createTimer({
+    duration: 20000,
+    loop: true,
+    onLoop: () => {
+      currentGreeting = (currentGreeting + 1) % greetings.length;
+      greetingText = '';
+      typeGreeting(greetings[currentGreeting]);
+    }
+  });
 
   onMount(() => {
     typeGreeting(greetings[currentGreeting]);

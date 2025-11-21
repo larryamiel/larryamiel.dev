@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Squiggle from '$lib/components/Squiggle.svelte';
-	import RandomIcons from '$lib/components/RandomIcons/RandomIcons.svelte';
+	import Countries from '$lib/components/Countries/Countries.svelte';
 
 	import IconGithub from '$lib/assets/icon_github.svg';
 	import IconLinkedin from '$lib/assets/icon_linkedin.svg';
@@ -11,7 +11,7 @@
 </script>
 
 <div role="none" class="container flex lg:flex-row flex-col">
-	<div class="left flex flex-col justify-between">
+	<div class="left flex flex-col justify-between max-h-screen">
 		<div class="mb-4 lg:hidden block">
 			<div class="social-icons flex flex-row flex-wrap gap-4">
 				<div class="social-icon w-6 h-6">
@@ -30,14 +30,10 @@
 
 		<div>
 			<Greeting />
-
-			<div class="my-10">
-				<Squiggle length={420} />
-			</div>
 		</div>
 
 		<div class="lg:w-120 w-full lg:max-h-120 max-h-80">
-			<RandomIcons />
+			<Countries />
 		</div>
 
 		<div class="my-10 lg:block hidden">
