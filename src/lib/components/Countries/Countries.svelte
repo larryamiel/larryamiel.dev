@@ -93,11 +93,11 @@
 
     const getCurrentWeather = () => {
       if (currentCountry && !Object.keys(weatherData).includes(currentCountry.name)) {
-        // fetch(weatherBaseEndpoint.replace('{latitude}', currentCountry.latitude).replace('{longitude}', currentCountry.longitude))
-        //   .then(response => response.json())
-        //   .then(data => {
-        //     weatherData[currentCountry.name] = data;
-        //   });
+        fetch(weatherBaseEndpoint.replace('{latitude}', currentCountry.latitude).replace('{longitude}', currentCountry.longitude))
+          .then(response => response.json())
+          .then(data => {
+            weatherData[currentCountry.name] = data;
+          });
       }
     }
 
