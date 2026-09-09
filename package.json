@@ -28,6 +28,7 @@
 		"vite": "^7.1.10"
 	},
 	"dependencies": {
+		"@vercel/analytics": "^2.0.1",
 		"animejs": "^4.2.2",
 		"moment-timezone": "^0.6.0",
 		"openmeteo": "^1.2.2"
