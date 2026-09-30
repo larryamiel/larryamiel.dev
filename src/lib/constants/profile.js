@@ -218,6 +218,24 @@ export const projects = [
 		accent: '#FF4B4B'
 	},
 	{
+		id: 'skwabble',
+		name: 'Skwabble',
+		kicker: 'Real-time multiplayer · Browser game',
+		year: '2026',
+		href: '/skwabble',
+		cta: 'See how it plays',
+		blurb:
+			'A word-snatching game for 2–6 players. Tiles flip one at a time, everyone races to spell words from the face-up letters, and any word on the table can be stolen by rebuilding it with one more tile.',
+		highlights: [
+			'One Cloudflare Durable Object per room, so simultaneous claims resolve strictly in arrival order',
+			'Quick Play matchmaking into the fullest open lobby, plus private rooms with house rules',
+			'Game rules written as pure TypeScript shared by the client preview and the server'
+		],
+		stack: ['React', 'TypeScript', 'Cloudflare Workers', 'Durable Objects'],
+		shot: '/skwabble/shots/steal-preview.webp',
+		accent: '#FF4D8D'
+	},
+	{
 		id: 'seller-investigators',
 		name: 'Amazon seller reporting platform',
 		kicker: 'Evotech Software Solutions',

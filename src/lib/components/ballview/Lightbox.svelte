@@ -80,10 +80,14 @@
 		width: 100%;
 	}
 
+	/* Capped by height too, so a portrait phone shot fits the viewport. */
 	.stage img {
 		display: block;
-		width: 100%;
+		width: auto;
+		max-width: 100%;
 		height: auto;
+		max-height: calc(100vh - 9rem);
+		margin-inline: auto;
 		border-radius: 10px;
 		border: 1px solid rgba(255, 255, 255, 0.12);
 		box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.9);

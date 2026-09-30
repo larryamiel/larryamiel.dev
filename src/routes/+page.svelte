@@ -33,7 +33,9 @@
 		accent: accents[index % accents.length]
 	}));
 
-	const [featured, ...rest] = tinted;
+	// The personal projects get the wide cards; the team work shares the grid.
+	const featured = tinted.filter((project) => project.href);
+	const rest = tinted.filter((project) => !project.href);
 
 	const sections = [
 		{ id: 'work', label: 'Work' },
@@ -138,15 +140,18 @@
 						<span class="section-kicker space-mono">01 — Selected work</span>
 						<h2 class="section-title">Things I built that people actually use</h2>
 						<p class="section-lede">
-							One is open source and you can download it. The other three are production systems I
-							worked on inside a team — described at the level I can describe them.
+							Two are mine — a desktop app you can download and a game you can play right now. The
+							other three are production systems I worked on inside a team — described at the level
+							I can describe them.
 						</p>
 					</div>
 				</Reveal>
 
 				<Reveal delay={80}>
 					<div class="featured-wrap">
-						<ProjectCard project={featured} featured />
+						{#each featured as project, index}
+							<ProjectCard {project} featured reverse={index % 2 === 1} />
+						{/each}
 					</div>
 				</Reveal>
 
@@ -516,6 +521,9 @@
 	}
 
 	.featured-wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
 

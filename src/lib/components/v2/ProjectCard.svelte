@@ -4,7 +4,8 @@
 
 	let {
 		project,
-		featured = false
+		featured = false,
+		reverse = false
 	}: {
 		project: {
 			id: string;
@@ -20,11 +21,18 @@
 			shot?: string;
 		};
 		featured?: boolean;
+		/** Featured only: puts the screenshot on the left, for alternating rows. */
+		reverse?: boolean;
 	} = $props();
 </script>
 
 <TiltCard accent={project.accent} max={featured ? 5 : 7} lift={featured ? 5 : 7}>
-	<article class="project" class:featured style:--accent={project.accent}>
+	<article
+		class="project"
+		class:featured
+		class:reverse={featured && reverse}
+		style:--accent={project.accent}
+	>
 		<div class="content">
 			<div class="meta">
 				<span class="kicker space-mono">{project.kicker}</span>
@@ -100,6 +108,14 @@
 		align-items: center;
 		gap: 2.25rem;
 		padding: 2rem;
+	}
+
+	.reverse {
+		flex-direction: row-reverse;
+	}
+
+	.reverse .shot {
+		transform: translateZ(44px) rotateY(6deg);
 	}
 
 	.content {
@@ -230,7 +246,8 @@
 	}
 
 	@media only screen and (max-width: 900px) {
-		.featured {
+		.featured,
+		.reverse {
 			flex-direction: column;
 			align-items: stretch;
 			padding: 1.5rem;
@@ -240,14 +257,16 @@
 			font-size: 1.6rem;
 		}
 
-		.shot {
+		.shot,
+		.reverse .shot {
 			transform: none;
 			order: -1;
 		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.shot {
+		.shot,
+		.reverse .shot {
 			transform: none;
 		}
 	}
